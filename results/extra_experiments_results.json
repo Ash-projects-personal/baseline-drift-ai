@@ -1,0 +1,209 @@
+{
+  "upfall_model_comparison_subjectwise": {
+    "n_test": 99,
+    "models": {
+      "logistic_regression": {
+        "accuracy": 0.9495,
+        "f1": 0.9474,
+        "roc_auc": 0.9947
+      },
+      "random_forest": {
+        "accuracy": 0.9899,
+        "f1": 0.989,
+        "roc_auc": 1.0
+      },
+      "gradient_boosting": {
+        "accuracy": 0.9596,
+        "f1": 0.9574,
+        "roc_auc": 0.9905
+      },
+      "svm_rbf": {
+        "accuracy": 0.9495,
+        "f1": 0.9474,
+        "roc_auc": 0.9984
+      }
+    }
+  },
+  "upfall_loso_logreg": {
+    "per_subject_accuracy": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 1.0,
+      "10": 0.9091,
+      "11": 1.0,
+      "12": 1.0,
+      "13": 1.0,
+      "14": 1.0,
+      "15": 0.9394,
+      "16": 0.9091,
+      "17": 1.0
+    },
+    "mean_accuracy": 0.9838,
+    "sd_accuracy": 0.0341,
+    "min_accuracy": 0.9091
+  },
+  "upfall_loso_random_forest": {
+    "per_subject_accuracy": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 1.0,
+      "10": 1.0,
+      "11": 0.9697,
+      "12": 1.0,
+      "13": 1.0,
+      "14": 1.0,
+      "15": 0.9697,
+      "16": 1.0,
+      "17": 1.0
+    },
+    "mean_accuracy": 0.996,
+    "sd_accuracy": 0.0107,
+    "min_accuracy": 0.9697
+  },
+  "sisfall_model_comparison_subjectwise": {
+    "n_test": 430,
+    "models": {
+      "logistic_regression": {
+        "accuracy": 0.9884,
+        "f1": 0.9833,
+        "roc_auc": 0.9992
+      },
+      "random_forest": {
+        "accuracy": 0.9977,
+        "f1": 0.9967,
+        "roc_auc": 1.0
+      },
+      "gradient_boosting": {
+        "accuracy": 0.9977,
+        "f1": 0.9967,
+        "roc_auc": 1.0
+      }
+    }
+  },
+  "sisfall_loso_logreg": {
+    "per_subject_accuracy": {
+      "SA01": 0.9675,
+      "SA02": 0.961,
+      "SA03": 0.961,
+      "SA04": 0.9805,
+      "SA05": 0.9481,
+      "SA06": 1.0,
+      "SA07": 1.0,
+      "SA08": 0.9935,
+      "SA09": 0.9935,
+      "SA10": 1.0,
+      "SA11": 0.987,
+      "SA12": 0.987,
+      "SA13": 1.0,
+      "SA14": 0.9675,
+      "SA15": 0.9396,
+      "SA16": 1.0,
+      "SA17": 1.0,
+      "SA18": 1.0,
+      "SA19": 1.0,
+      "SA20": 1.0,
+      "SA21": 0.987,
+      "SA22": 0.9805,
+      "SA23": 0.974,
+      "SE01": 1.0,
+      "SE02": 0.8958,
+      "SE03": 0.9831,
+      "SE04": 0.9153,
+      "SE05": 1.0,
+      "SE06": 0.9091,
+      "SE07": 1.0,
+      "SE08": 0.9831,
+      "SE09": 1.0,
+      "SE10": 1.0,
+      "SE11": 1.0,
+      "SE12": 1.0,
+      "SE13": 1.0,
+      "SE14": 1.0,
+      "SE15": 1.0
+    },
+    "mean_accuracy": 0.982,
+    "sd_accuracy": 0.0275,
+    "min_accuracy": 0.8958
+  },
+  "synthetic_alert_rule_sweep": {
+    "window_14_z_1.5": {
+      "detected_of_3": 3,
+      "false_alert_subjects_of_7": 0,
+      "lags_days": [
+        1,
+        27,
+        41
+      ]
+    },
+    "window_14_z_2.0": {
+      "detected_of_3": 3,
+      "false_alert_subjects_of_7": 0,
+      "lags_days": [
+        1,
+        27,
+        45
+      ]
+    },
+    "window_14_z_2.5": {
+      "detected_of_3": 3,
+      "false_alert_subjects_of_7": 0,
+      "lags_days": [
+        1,
+        35,
+        45
+      ]
+    },
+    "window_14_z_3.0": {
+      "detected_of_3": 2,
+      "false_alert_subjects_of_7": 0,
+      "lags_days": [
+        1,
+        45
+      ]
+    },
+    "window_28_z_1.5": {
+      "detected_of_3": 3,
+      "false_alert_subjects_of_7": 0,
+      "lags_days": [
+        1,
+        12,
+        27
+      ]
+    },
+    "window_28_z_2.0": {
+      "detected_of_3": 3,
+      "false_alert_subjects_of_7": 0,
+      "lags_days": [
+        1,
+        28,
+        41
+      ]
+    },
+    "window_28_z_2.5": {
+      "detected_of_3": 3,
+      "false_alert_subjects_of_7": 0,
+      "lags_days": [
+        1,
+        45,
+        45
+      ]
+    },
+    "window_28_z_3.0": {
+      "detected_of_3": 3,
+      "false_alert_subjects_of_7": 0,
+      "lags_days": [
+        1,
+        45,
+        50
+      ]
+    }
+  }
+}

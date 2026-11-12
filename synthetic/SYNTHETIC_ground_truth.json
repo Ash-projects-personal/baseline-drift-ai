@@ -1,0 +1,485 @@
+{
+  "seed": 20261110,
+  "n_days": 180,
+  "subjects": {
+    "Y01": {
+      "group": "young",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 1.425215769269112,
+          "day_to_day_sd": 0.03284236137673306
+        },
+        "resting_hr": {
+          "mean": 64.5660472773799,
+          "day_to_day_sd": 4.049277142651926
+        },
+        "hrv_sdnn": {
+          "mean": 61.23590597090531,
+          "day_to_day_sd": 7.834738954321033
+        },
+        "walking_hr": {
+          "mean": 108.23226037308217,
+          "day_to_day_sd": 4.51604374263958
+        },
+        "step_length": {
+          "mean": 0.7682904131819284,
+          "day_to_day_sd": 0.0216656571022307
+        },
+        "step_time_cv": {
+          "mean": 2.8252316596394165,
+          "day_to_day_sd": 0.30671127153576144
+        },
+        "double_support": {
+          "mean": 21.35382307706843,
+          "day_to_day_sd": 1.1647809232530228
+        },
+        "step_count": {
+          "mean": 9471.82454829093,
+          "day_to_day_sd": 1476.1267447022083
+        },
+        "sleep_hours": {
+          "mean": 8.299259928016962,
+          "day_to_day_sd": 0.605614080842326
+        }
+      },
+      "miss_prob": 0.08,
+      "injected_change": null,
+      "n_recorded_days": 170,
+      "n_missing_days": 10
+    },
+    "Y02": {
+      "group": "young",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 1.3226289943178426,
+          "day_to_day_sd": 0.039751642265778056
+        },
+        "resting_hr": {
+          "mean": 63.991922798595056,
+          "day_to_day_sd": 3.7720713105544057
+        },
+        "hrv_sdnn": {
+          "mean": 56.05414398232509,
+          "day_to_day_sd": 6.6264898816398805
+        },
+        "walking_hr": {
+          "mean": 102.870752549585,
+          "day_to_day_sd": 4.824597045481144
+        },
+        "step_length": {
+          "mean": 0.7556836335662561,
+          "day_to_day_sd": 0.026750585473968296
+        },
+        "step_time_cv": {
+          "mean": 2.6489907582207235,
+          "day_to_day_sd": 0.3632252047149984
+        },
+        "double_support": {
+          "mean": 22.971448866161506,
+          "day_to_day_sd": 1.08522180473742
+        },
+        "step_count": {
+          "mean": 7421.664600607087,
+          "day_to_day_sd": 1450.2600745898376
+        },
+        "sleep_hours": {
+          "mean": 7.935339658216384,
+          "day_to_day_sd": 0.7480038744996396
+        }
+      },
+      "miss_prob": 0.08,
+      "injected_change": null,
+      "n_recorded_days": 167,
+      "n_missing_days": 13
+    },
+    "Y03": {
+      "group": "young",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 1.3194169698980969,
+          "day_to_day_sd": 0.04022226184539916
+        },
+        "resting_hr": {
+          "mean": 65.38285369296332,
+          "day_to_day_sd": 4.825607081091908
+        },
+        "hrv_sdnn": {
+          "mean": 59.282970424479274,
+          "day_to_day_sd": 6.946930809146161
+        },
+        "walking_hr": {
+          "mean": 105.4586482425714,
+          "day_to_day_sd": 5.394078776832196
+        },
+        "step_length": {
+          "mean": 0.7258549052658919,
+          "day_to_day_sd": 0.02893801502883258
+        },
+        "step_time_cv": {
+          "mean": 3.489627931649522,
+          "day_to_day_sd": 0.34590378428815177
+        },
+        "double_support": {
+          "mean": 20.59093904763517,
+          "day_to_day_sd": 1.0985029948013991
+        },
+        "step_count": {
+          "mean": 9539.857294612491,
+          "day_to_day_sd": 1239.2641823523202
+        },
+        "sleep_hours": {
+          "mean": 8.153138867804838,
+          "day_to_day_sd": 0.7314310884083511
+        }
+      },
+      "miss_prob": 0.08,
+      "injected_change": {
+        "kind": "abrupt",
+        "onset_day": 90,
+        "params": {
+          "gait_shift": -0.28,
+          "cv_shift": 2.5,
+          "step_len_shift": -0.08,
+          "ds_shift": 3.0
+        }
+      },
+      "n_recorded_days": 157,
+      "n_missing_days": 23
+    },
+    "Y04": {
+      "group": "young",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 1.361202158222031,
+          "day_to_day_sd": 0.035129599536870164
+        },
+        "resting_hr": {
+          "mean": 60.06014773311358,
+          "day_to_day_sd": 3.0186576583890736
+        },
+        "hrv_sdnn": {
+          "mean": 68.67232787085089,
+          "day_to_day_sd": 6.383599535806812
+        },
+        "walking_hr": {
+          "mean": 95.316072465377,
+          "day_to_day_sd": 4.4886865955210355
+        },
+        "step_length": {
+          "mean": 0.7510315291949426,
+          "day_to_day_sd": 0.028893417001931668
+        },
+        "step_time_cv": {
+          "mean": 3.376231510421312,
+          "day_to_day_sd": 0.34057647341502995
+        },
+        "double_support": {
+          "mean": 20.26738120779846,
+          "day_to_day_sd": 1.3672308243780955
+        },
+        "step_count": {
+          "mean": 7599.953207383341,
+          "day_to_day_sd": 1588.0135723874882
+        },
+        "sleep_hours": {
+          "mean": 7.427752050073714,
+          "day_to_day_sd": 0.8528987621834834
+        }
+      },
+      "miss_prob": 0.08,
+      "injected_change": null,
+      "n_recorded_days": 161,
+      "n_missing_days": 19
+    },
+    "Y05": {
+      "group": "young",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 1.3722941094864516,
+          "day_to_day_sd": 0.03578487505149231
+        },
+        "resting_hr": {
+          "mean": 68.05882118853108,
+          "day_to_day_sd": 3.0012900090910666
+        },
+        "hrv_sdnn": {
+          "mean": 41.20409967704652,
+          "day_to_day_sd": 7.00363421525261
+        },
+        "walking_hr": {
+          "mean": 101.29186531711008,
+          "day_to_day_sd": 4.390434491874302
+        },
+        "step_length": {
+          "mean": 0.7401099567710774,
+          "day_to_day_sd": 0.024208201935567907
+        },
+        "step_time_cv": {
+          "mean": 3.6804345530496736,
+          "day_to_day_sd": 0.3989650611792753
+        },
+        "double_support": {
+          "mean": 21.303505464476416,
+          "day_to_day_sd": 1.2895872286514891
+        },
+        "step_count": {
+          "mean": 7868.297045197352,
+          "day_to_day_sd": 1799.3704827369902
+        },
+        "sleep_hours": {
+          "mean": 8.008106034010542,
+          "day_to_day_sd": 0.7534208107235982
+        }
+      },
+      "miss_prob": 0.08,
+      "injected_change": null,
+      "n_recorded_days": 161,
+      "n_missing_days": 19
+    },
+    "O01": {
+      "group": "older",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 1.1672608285461115,
+          "day_to_day_sd": 0.06667829112866454
+        },
+        "resting_hr": {
+          "mean": 61.03475689960808,
+          "day_to_day_sd": 5.0621192543754105
+        },
+        "hrv_sdnn": {
+          "mean": 33.17288857918902,
+          "day_to_day_sd": 4.007059870572988
+        },
+        "walking_hr": {
+          "mean": 103.19417747335063,
+          "day_to_day_sd": 6.772441112545651
+        },
+        "step_length": {
+          "mean": 0.6139631631102308,
+          "day_to_day_sd": 0.02357043981218117
+        },
+        "step_time_cv": {
+          "mean": 5.84220541609136,
+          "day_to_day_sd": 0.4585323214884722
+        },
+        "double_support": {
+          "mean": 28.910166861911218,
+          "day_to_day_sd": 1.3010356446652622
+        },
+        "step_count": {
+          "mean": 4318.575920663904,
+          "day_to_day_sd": 1133.462485057818
+        },
+        "sleep_hours": {
+          "mean": 6.787677350566149,
+          "day_to_day_sd": 0.8391222276629744
+        }
+      },
+      "miss_prob": 0.1,
+      "injected_change": null,
+      "n_recorded_days": 161,
+      "n_missing_days": 19
+    },
+    "O02": {
+      "group": "older",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 0.9671442784218988,
+          "day_to_day_sd": 0.056615802665296346
+        },
+        "resting_hr": {
+          "mean": 73.50666414013033,
+          "day_to_day_sd": 5.2593864992118124
+        },
+        "hrv_sdnn": {
+          "mean": 35.87993787427042,
+          "day_to_day_sd": 4.732224683785998
+        },
+        "walking_hr": {
+          "mean": 105.3134446059668,
+          "day_to_day_sd": 6.283993580360623
+        },
+        "step_length": {
+          "mean": 0.5592998069821403,
+          "day_to_day_sd": 0.02869892536632994
+        },
+        "step_time_cv": {
+          "mean": 5.522570780138511,
+          "day_to_day_sd": 0.48691435871304134
+        },
+        "double_support": {
+          "mean": 29.823170132387727,
+          "day_to_day_sd": 1.646225182246348
+        },
+        "step_count": {
+          "mean": 6050.043832285626,
+          "day_to_day_sd": 1079.2692978190871
+        },
+        "sleep_hours": {
+          "mean": 8.237957602316152,
+          "day_to_day_sd": 0.9272641688003507
+        }
+      },
+      "miss_prob": 0.1,
+      "injected_change": {
+        "kind": "gradual",
+        "onset_day": 120,
+        "params": {
+          "gait_per_day": -0.003,
+          "cv_per_day": 0.058,
+          "step_len_per_day": -0.001,
+          "ds_per_day": 0.067,
+          "sd_multiplier_after_onset": 1.5
+        }
+      },
+      "n_recorded_days": 167,
+      "n_missing_days": 13
+    },
+    "O03": {
+      "group": "older",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 1.1801360071389235,
+          "day_to_day_sd": 0.06548774176460927
+        },
+        "resting_hr": {
+          "mean": 66.1572949024704,
+          "day_to_day_sd": 4.3308013477862115
+        },
+        "hrv_sdnn": {
+          "mean": 28.11535574610935,
+          "day_to_day_sd": 5.051782852903046
+        },
+        "walking_hr": {
+          "mean": 114.26849789797527,
+          "day_to_day_sd": 5.534177072872122
+        },
+        "step_length": {
+          "mean": 0.5631512839453209,
+          "day_to_day_sd": 0.02659927895034385
+        },
+        "step_time_cv": {
+          "mean": 6.107302748126246,
+          "day_to_day_sd": 0.5170445998553849
+        },
+        "double_support": {
+          "mean": 31.555864791395166,
+          "day_to_day_sd": 1.777900841066324
+        },
+        "step_count": {
+          "mean": 5359.759956744045,
+          "day_to_day_sd": 1257.5388456695518
+        },
+        "sleep_hours": {
+          "mean": 6.592238505424041,
+          "day_to_day_sd": 0.8676936725604012
+        }
+      },
+      "miss_prob": 0.1,
+      "injected_change": null,
+      "n_recorded_days": 154,
+      "n_missing_days": 26
+    },
+    "O04": {
+      "group": "older",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 0.9354602959280721,
+          "day_to_day_sd": 0.0707594419260858
+        },
+        "resting_hr": {
+          "mean": 61.37648254412722,
+          "day_to_day_sd": 5.954710674155576
+        },
+        "hrv_sdnn": {
+          "mean": 38.63024983332956,
+          "day_to_day_sd": 5.00198956542271
+        },
+        "walking_hr": {
+          "mean": 100.3708810428926,
+          "day_to_day_sd": 5.800608829659935
+        },
+        "step_length": {
+          "mean": 0.6020925987397375,
+          "day_to_day_sd": 0.024771626394357184
+        },
+        "step_time_cv": {
+          "mean": 6.338177335951787,
+          "day_to_day_sd": 0.40774112679419133
+        },
+        "double_support": {
+          "mean": 32.29756465029245,
+          "day_to_day_sd": 1.2857058575881488
+        },
+        "step_count": {
+          "mean": 4560.7469637576005,
+          "day_to_day_sd": 1122.8639548726192
+        },
+        "sleep_hours": {
+          "mean": 8.094344470011025,
+          "day_to_day_sd": 0.9890437628782398
+        }
+      },
+      "miss_prob": 0.1,
+      "injected_change": {
+        "kind": "gradual",
+        "onset_day": 120,
+        "params": {
+          "gait_per_day": -0.003,
+          "cv_per_day": 0.058,
+          "step_len_per_day": -0.001,
+          "ds_per_day": 0.067,
+          "sd_multiplier_after_onset": 1.5
+        }
+      },
+      "n_recorded_days": 157,
+      "n_missing_days": 23
+    },
+    "O05": {
+      "group": "older",
+      "baseline_params": {
+        "gait_speed": {
+          "mean": 0.9117434134433323,
+          "day_to_day_sd": 0.06843896963588009
+        },
+        "resting_hr": {
+          "mean": 64.03514542813946,
+          "day_to_day_sd": 4.458140519211173
+        },
+        "hrv_sdnn": {
+          "mean": 21.80040244170567,
+          "day_to_day_sd": 5.570399518642701
+        },
+        "walking_hr": {
+          "mean": 107.64535040285419,
+          "day_to_day_sd": 6.747704954381653
+        },
+        "step_length": {
+          "mean": 0.5670989218080194,
+          "day_to_day_sd": 0.03392026531593901
+        },
+        "step_time_cv": {
+          "mean": 4.274878827846996,
+          "day_to_day_sd": 0.5718726786847892
+        },
+        "double_support": {
+          "mean": 32.9543171716326,
+          "day_to_day_sd": 1.7980468386110866
+        },
+        "step_count": {
+          "mean": 4137.195222089089,
+          "day_to_day_sd": 1186.2682522560403
+        },
+        "sleep_hours": {
+          "mean": 8.010600857547011,
+          "day_to_day_sd": 0.9358880863021319
+        }
+      },
+      "miss_prob": 0.1,
+      "injected_change": null,
+      "n_recorded_days": 155,
+      "n_missing_days": 25
+    }
+  }
+}

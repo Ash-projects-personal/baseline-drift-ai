@@ -1,0 +1,72 @@
+{
+  "z_rule_two_consecutive": {
+    "detected_of_3": 3,
+    "false_alert_subjects_of_7": 0,
+    "lags_days": [
+      1,
+      28,
+      41
+    ],
+    "changed_subjects_with_pre_onset_alert": 0
+  },
+  "cusum_combined_k0.5_h5": {
+    "detected_of_3": 3,
+    "false_alert_subjects_of_7": 0,
+    "lags_days": [
+      0,
+      11,
+      12
+    ],
+    "changed_subjects_with_pre_onset_alert": 0
+  },
+  "cusum_gait_only_k0.5_h5": {
+    "detected_of_3": 3,
+    "false_alert_subjects_of_7": 1,
+    "lags_days": [
+      0,
+      8,
+      26
+    ],
+    "changed_subjects_with_pre_onset_alert": 1
+  },
+  "ewma_combined_lambda0.2_L3": {
+    "detected_of_3": 3,
+    "false_alert_subjects_of_7": 0,
+    "lags_days": [
+      0,
+      11,
+      11
+    ],
+    "changed_subjects_with_pre_onset_alert": 0
+  },
+  "step_threshold_sensitivity": {
+    "threshold_2": {
+      "usable_of_12": 10,
+      "usable_adl_of_6": 6
+    },
+    "threshold_3": {
+      "usable_of_12": 8,
+      "usable_adl_of_6": 5
+    },
+    "threshold_4": {
+      "usable_of_12": 5,
+      "usable_adl_of_6": 2
+    },
+    "threshold_5": {
+      "usable_of_12": 2,
+      "usable_adl_of_6": 1
+    },
+    "threshold_6": {
+      "usable_of_12": 1,
+      "usable_adl_of_6": 0
+    },
+    "threshold_7": {
+      "usable_of_12": 1,
+      "usable_adl_of_6": 0
+    },
+    "threshold_8": {
+      "usable_of_12": 0,
+      "usable_adl_of_6": 0
+    }
+  }
+}

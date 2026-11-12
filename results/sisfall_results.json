@@ -1,0 +1,366 @@
+{
+  "dataset": "SisFall (Sucerquia et al., Sensors 2017, 17(1), 198)",
+  "source_dir": "/home/hatch/workspace/your_files/project-progress-report/datasets/sisfall/raw/content/gdrive/MyDrive/Datasets/SisFall_dataset",
+  "n_files": 4396,
+  "n_files_with_one_stray_extra_value_final_row_dropped": 17,
+  "truncated_files": [
+    "F07_SA01_R01.txt",
+    "F11_SA02_R01.txt",
+    "D05_SA21_R03.txt",
+    "D05_SE07_R01.txt",
+    "D07_SE07_R01.txt",
+    "D07_SE07_R02.txt",
+    "D07_SE07_R04.txt",
+    "D17_SE07_R01.txt",
+    "D17_SE07_R02.txt",
+    "D17_SE07_R04.txt",
+    "D17_SE07_R05.txt",
+    "D07_SE08_R01.txt",
+    "D07_SE08_R03.txt",
+    "D07_SE08_R05.txt",
+    "D17_SE08_R01.txt",
+    "D17_SE08_R03.txt",
+    "D17_SE08_R05.txt"
+  ],
+  "n_subjects": 38,
+  "n_young_subjects": 23,
+  "n_elderly_subjects": 15,
+  "n_fall_files": 1744,
+  "n_adl_files": 2652,
+  "n_features": 45,
+  "label_rule": "fall = files named F*, ADL = files named D*",
+  "model": "StandardScaler + LogisticRegression(C=1.0, class_weight=balanced, max_iter=2000)",
+  "features": "per-file whole-recording stats: per-channel mean/std/min/max (9 ch) + per-sensor magnitude mean/std/max (ADXL345 accel, ITG3200 gyro, MMA8451Q accel)",
+  "units_note": "sensor values are raw integer counts from the files, not calibrated g or deg/s",
+  "experiment_2a": {
+    "subject_wise": {
+      "split": "subject-wise (test SA22, SA23, SE14, SE15; train other 34 subjects)",
+      "n_train": 3966,
+      "n_test": 430,
+      "n_test_fall": 150,
+      "n_test_adl": 280,
+      "accuracy": 0.9883720930232558,
+      "precision_fall": 0.9865771812080537,
+      "recall_fall": 0.98,
+      "f1_fall": 0.9832775919732442,
+      "roc_auc": 0.9992142857142857,
+      "confusion_matrix": {
+        "tn": 278,
+        "fp": 2,
+        "fn": 3,
+        "tp": 147
+      },
+      "dummy_accuracy": 0.6511627906976745
+    },
+    "random_split": {
+      "split": "random stratified 80/20 file split (seed 42)",
+      "n_train": 3517,
+      "n_test": 879,
+      "n_test_fall": 349,
+      "n_test_adl": 530,
+      "accuracy": 0.987485779294653,
+      "precision_fall": 0.9828571428571429,
+      "recall_fall": 0.9856733524355301,
+      "f1_fall": 0.9842632331902719,
+      "roc_auc": 0.9995296534573174,
+      "confusion_matrix": {
+        "tn": 524,
+        "fp": 6,
+        "fn": 5,
+        "tp": 344
+      },
+      "dummy_accuracy": 0.602957906712173
+    }
+  },
+  "experiment_2b_icc": {
+    "per_activity": {
+      "stairs up/down slowly (D05)": {
+        "adxl_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 297.2607504075047,
+          "within_subject_var_msw": 2.4905753240138457,
+          "variance_ratio_between_within": 119.35425021734945,
+          "icc1": 0.9594663338215746
+        },
+        "adxl_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 450.7320169202657,
+          "within_subject_var_msw": 10.324488441187283,
+          "variance_ratio_between_within": 43.6565956258103,
+          "icc1": 0.8950827281231131
+        },
+        "mma_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 1794.1286262867698,
+          "within_subject_var_msw": 1.7617024387126474,
+          "variance_ratio_between_within": 1018.4061660253009,
+          "icc1": 0.9951095756597028
+        },
+        "mma_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 6508.324301211425,
+          "within_subject_var_msw": 160.47798987482685,
+          "variance_ratio_between_within": 40.555868791028175,
+          "icc1": 0.8877813375506034
+        },
+        "gyro_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 303484.3473549326,
+          "within_subject_var_msw": 90637.43875891819,
+          "variance_ratio_between_within": 3.348333222016068,
+          "icc1": 0.3195735891481233
+        },
+        "gyro_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 262581.0924728354,
+          "within_subject_var_msw": 69834.62221892375,
+          "variance_ratio_between_within": 3.7600417118270215,
+          "icc1": 0.35567356649906434
+        }
+      },
+      "sit half chair slowly (D07)": {
+        "adxl_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 283.3709219286673,
+          "within_subject_var_msw": 0.31636554547293944,
+          "variance_ratio_between_within": 895.7072790750713,
+          "icc1": 0.9944426369372713
+        },
+        "adxl_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 39.824496216715374,
+          "within_subject_var_msw": 1.6274790766377174,
+          "variance_ratio_between_within": 24.470051129007818,
+          "icc1": 0.8243768521052792
+        },
+        "mma_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 1891.5374038279863,
+          "within_subject_var_msw": 1.0600674304132551,
+          "variance_ratio_between_within": 1784.3557396066703,
+          "icc1": 0.9972041356821436
+        },
+        "mma_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 605.3494978373881,
+          "within_subject_var_msw": 27.56273649692228,
+          "variance_ratio_between_within": 21.962605124675587,
+          "icc1": 0.8074153199962256
+        },
+        "gyro_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 7635.043217310648,
+          "within_subject_var_msw": 241.26394025227356,
+          "variance_ratio_between_within": 31.64601891740305,
+          "icc1": 0.859731881655965
+        },
+        "gyro_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 13047.96407866542,
+          "within_subject_var_msw": 532.4938822976803,
+          "variance_ratio_between_within": 24.503500439036426,
+          "icc1": 0.8245829486559362
+        }
+      },
+      "sit half chair quickly (D08)": {
+        "adxl_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 254.2454861571341,
+          "within_subject_var_msw": 0.507346788538912,
+          "variance_ratio_between_within": 501.1276150763182,
+          "icc1": 0.990101511279987
+        },
+        "adxl_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 395.3918530328325,
+          "within_subject_var_msw": 31.176275323460654,
+          "variance_ratio_between_within": 12.682459624523963,
+          "icc1": 0.7002840041255203
+        },
+        "mma_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 1885.880282850555,
+          "within_subject_var_msw": 4.901259862165644,
+          "variance_ratio_between_within": 384.774595896915,
+          "icc1": 0.9871390773657295
+        },
+        "mma_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 5913.874672511378,
+          "within_subject_var_msw": 492.07488256697377,
+          "variance_ratio_between_within": 12.01824129218071,
+          "icc1": 0.6878558695179136
+        },
+        "gyro_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 6595.030626226242,
+          "within_subject_var_msw": 219.57672024179533,
+          "variance_ratio_between_within": 30.0351996284664,
+          "icc1": 0.8530932665422625
+        },
+        "gyro_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 25525.29814868491,
+          "within_subject_var_msw": 1126.1202907309826,
+          "variance_ratio_between_within": 22.66658221042801,
+          "icc1": 0.8124994061651912
+        }
+      },
+      "sit, try up, collapse (D11)": {
+        "adxl_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 416.31246203165745,
+          "within_subject_var_msw": 2.724936967689846,
+          "variance_ratio_between_within": 152.7787493685037,
+          "icc1": 0.9681079226608215
+        },
+        "adxl_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 604.4921174506757,
+          "within_subject_var_msw": 58.0043785700775,
+          "variance_ratio_between_within": 10.421491141748268,
+          "icc1": 0.6532952140069845
+        },
+        "mma_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 2193.286287405075,
+          "within_subject_var_msw": 11.62006312697218,
+          "variance_ratio_between_within": 188.7499459718147,
+          "icc1": 0.9740596555044891
+        },
+        "mma_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 9738.610025414946,
+          "within_subject_var_msw": 897.0005204204916,
+          "variance_ratio_between_within": 10.856861064974328,
+          "icc1": 0.6634551552893155
+        },
+        "gyro_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 4059.281446669976,
+          "within_subject_var_msw": 246.0471626307585,
+          "variance_ratio_between_within": 16.49798113202271,
+          "icc1": 0.7560735387648096
+        },
+        "gyro_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 27654.352102526285,
+          "within_subject_var_msw": 1872.2712119442306,
+          "variance_ratio_between_within": 14.770484065611978,
+          "icc1": 0.7336243443417567
+        }
+      },
+      "sit, lie slowly, sit again (D12)": {
+        "adxl_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 175.61442870875098,
+          "within_subject_var_msw": 4.067861457252725,
+          "variance_ratio_between_within": 43.17119217411945,
+          "icc1": 0.8940031029628448
+        },
+        "adxl_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 76.63373371454789,
+          "within_subject_var_msw": 3.069242559122464,
+          "variance_ratio_between_within": 24.968288507135277,
+          "icc1": 0.8273974660681651
+        },
+        "mma_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 1515.2821021154155,
+          "within_subject_var_msw": 21.56270257434539,
+          "variance_ratio_between_within": 70.27329236170281,
+          "icc1": 0.932681050738258
+        },
+        "mma_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 418.66488571152655,
+          "within_subject_var_msw": 50.690265053151386,
+          "variance_ratio_between_within": 8.259275923543399,
+          "icc1": 0.592145569511351
+        },
+        "gyro_mag_mean": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 5114.045533997245,
+          "within_subject_var_msw": 629.1078492510071,
+          "variance_ratio_between_within": 8.129044233172168,
+          "icc1": 0.587766364448955
+        },
+        "gyro_mag_std": {
+          "n_subjects": 37,
+          "between_subject_var_msb": 11725.802597980437,
+          "within_subject_var_msw": 1003.7773005809014,
+          "variance_ratio_between_within": 11.681677391184811,
+          "icc1": 0.6811565577282782
+        }
+      }
+    },
+    "mean_icc_across_activities": {
+      "adxl_mag_mean": 0.9612243015324997,
+      "adxl_mag_std": 0.7800872528858124,
+      "mma_mag_mean": 0.9772386989900645,
+      "mma_mag_std": 0.7277306503730818,
+      "gyro_mag_mean": 0.675247728112023,
+      "gyro_mag_std": 0.6815073646780453
+    }
+  },
+  "experiment_2c_reference": {
+    "population_zscore": {
+      "split": "subject-wise, population-reference z-scores",
+      "n_train": 3966,
+      "n_test": 430,
+      "n_test_fall": 150,
+      "n_test_adl": 280,
+      "accuracy": 0.9883720930232558,
+      "precision_fall": 0.9865771812080537,
+      "recall_fall": 0.98,
+      "f1_fall": 0.9832775919732442,
+      "roc_auc": 0.9992142857142857,
+      "confusion_matrix": {
+        "tn": 278,
+        "fp": 2,
+        "fn": 3,
+        "tp": 147
+      },
+      "dummy_accuracy": 0.6511627906976745
+    },
+    "personal_zscore": {
+      "split": "subject-wise, personal-reference z-scores",
+      "n_train": 3966,
+      "n_test": 430,
+      "n_test_fall": 150,
+      "n_test_adl": 280,
+      "accuracy": 0.9627906976744186,
+      "precision_fall": 0.9926470588235294,
+      "recall_fall": 0.9,
+      "f1_fall": 0.9440559440559441,
+      "roc_auc": 0.9978571428571429,
+      "confusion_matrix": {
+        "tn": 279,
+        "fp": 1,
+        "fn": 15,
+        "tp": 135
+      },
+      "dummy_accuracy": 0.6511627906976745
+    },
+    "raw_features": {
+      "split": "subject-wise (test SA22, SA23, SE14, SE15; train other 34 subjects)",
+      "n_train": 3966,
+      "n_test": 430,
+      "n_test_fall": 150,
+      "n_test_adl": 280,
+      "accuracy": 0.9883720930232558,
+      "precision_fall": 0.9865771812080537,
+      "recall_fall": 0.98,
+      "f1_fall": 0.9832775919732442,
+      "roc_auc": 0.9992142857142857,
+      "confusion_matrix": {
+        "tn": 278,
+        "fp": 2,
+        "fn": 3,
+        "tp": 147
+      },
+      "dummy_accuracy": 0.6511627906976745
+    }
+  }
+}

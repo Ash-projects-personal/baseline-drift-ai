@@ -1,0 +1,393 @@
+{
+  "dataset": "UP-Fall (Martinez-Villase\u00f1or et al., Sensors 2019, 19(9), 1988)",
+  "source_file": "/home/hatch/workspace/your_files/project-progress-report/datasets/up-fall/train.parquet",
+  "n_trials": 559,
+  "n_trials_excluded_missing_sensor": 66,
+  "excluded_subjects_missing_pocket_imu": [
+    5,
+    9
+  ],
+  "n_trials_used": 493,
+  "n_subjects_used": 15,
+  "n_fall_trials": 225,
+  "n_adl_trials": 268,
+  "n_features": 77,
+  "label_rule": "fall = activities 1-5, ADL = activities 6-11 (paper Table 5)",
+  "model": "StandardScaler + LogisticRegression(C=1.0, class_weight=balanced, max_iter=2000)",
+  "features": "per-trial whole-window stats: per-channel mean/std/min/max (15 ch) + per-IMU accel-magnitude mean/std/max (5 IMU) + overall magnitude max/mean",
+  "experiment_2a": {
+    "subject_wise": {
+      "split": "subject-wise (test subjects 15,16,17; train subjects 1-4,6-8,10-14)",
+      "n_train": 394,
+      "n_test": 99,
+      "n_test_fall": 45,
+      "n_test_adl": 54,
+      "accuracy": 0.9494949494949495,
+      "precision_fall": 0.9,
+      "recall_fall": 1.0,
+      "f1_fall": 0.9473684210526315,
+      "roc_auc": 0.9946502057613169,
+      "confusion_matrix": {
+        "tn": 49,
+        "fp": 5,
+        "fn": 0,
+        "tp": 45
+      },
+      "dummy_accuracy": 0.5454545454545454
+    },
+    "random_split": {
+      "split": "random stratified 80/20 trial split (seed 42)",
+      "n_train": 394,
+      "n_test": 99,
+      "n_test_fall": 45,
+      "n_test_adl": 54,
+      "accuracy": 0.98989898989899,
+      "precision_fall": 0.9782608695652174,
+      "recall_fall": 1.0,
+      "f1_fall": 0.989010989010989,
+      "roc_auc": 0.9995884773662552,
+      "confusion_matrix": {
+        "tn": 53,
+        "fp": 1,
+        "fn": 0,
+        "tp": 45
+      },
+      "dummy_accuracy": 0.5454545454545454
+    }
+  },
+  "experiment_2b_icc": {
+    "per_activity": {
+      "walking": {
+        "belt_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.0031627862748985634,
+          "within_subject_var_msw": 9.016302375538094e-06,
+          "variance_ratio_between_within": 350.78529347900314,
+          "icc1": 0.9914962441591162
+        },
+        "belt_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.0038300107585517613,
+          "within_subject_var_msw": 8.338223222803724e-05,
+          "variance_ratio_between_within": 45.933176124108634,
+          "icc1": 0.93741286844351
+        },
+        "ankle_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.019771355621079862,
+          "within_subject_var_msw": 0.00019772190979222643,
+          "variance_ratio_between_within": 99.99577508560554,
+          "icc1": 0.9705870169869087
+        },
+        "ankle_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.03899535212725929,
+          "within_subject_var_msw": 0.000509696123085198,
+          "variance_ratio_between_within": 76.50706050346207,
+          "icc1": 0.9617868764826865
+        },
+        "wrist_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.007524998668515438,
+          "within_subject_var_msw": 0.0001313366317447009,
+          "variance_ratio_between_within": 57.29550521093711,
+          "icc1": 0.9494059458751918
+        },
+        "wrist_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.01554541404318579,
+          "within_subject_var_msw": 0.0009914487158568333,
+          "variance_ratio_between_within": 15.67949385032092,
+          "icc1": 0.8303118841863483
+        }
+      },
+      "standing": {
+        "belt_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.0028102039464403747,
+          "within_subject_var_msw": 8.161514189815027e-07,
+          "variance_ratio_between_within": 3443.2384494868656,
+          "icc1": 0.9991292329851807
+        },
+        "belt_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 7.832522578016647e-05,
+          "within_subject_var_msw": 1.2707686181056984e-05,
+          "variance_ratio_between_within": 6.163610327183232,
+          "icc1": 0.632515531760429
+        },
+        "ankle_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.00206065560978777,
+          "within_subject_var_msw": 3.4368108907392586e-07,
+          "variance_ratio_between_within": 5995.836475438201,
+          "icc1": 0.9994998196412515
+        },
+        "ankle_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.00013958879380740808,
+          "within_subject_var_msw": 2.9430937949987136e-05,
+          "variance_ratio_between_within": 4.742927121269986,
+          "icc1": 0.5550893631140166
+        },
+        "wrist_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.0031174582762987547,
+          "within_subject_var_msw": 0.00023362058928463886,
+          "variance_ratio_between_within": 13.344107579920976,
+          "icc1": 0.8044852081247302
+        },
+        "wrist_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.007525920936924136,
+          "within_subject_var_msw": 0.0012875227641680378,
+          "variance_ratio_between_within": 5.845272135275357,
+          "icc1": 0.6176040871149838
+        }
+      },
+      "sitting": {
+        "belt_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.003438732554580911,
+          "within_subject_var_msw": 9.532205667091047e-05,
+          "variance_ratio_between_within": 36.074888380270465,
+          "icc1": 0.9212079108404023
+        },
+        "belt_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.00010511480619318946,
+          "within_subject_var_msw": 3.535032644153695e-05,
+          "variance_ratio_between_within": 2.973517270541486,
+          "icc1": 0.3968051507995712
+        },
+        "ankle_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.002177614217519537,
+          "within_subject_var_msw": 3.3266909809105546e-05,
+          "variance_ratio_between_within": 65.45886678429923,
+          "icc1": 0.955528455442447
+        },
+        "ankle_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.00040341207693121223,
+          "within_subject_var_msw": 0.00010127237361213796,
+          "variance_ratio_between_within": 3.983436573494723,
+          "icc1": 0.498615893533605
+        },
+        "wrist_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.004635356656008799,
+          "within_subject_var_msw": 0.00037595384977220236,
+          "variance_ratio_between_within": 12.329589546210126,
+          "icc1": 0.7906429915298281
+        },
+        "wrist_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.0038023810977712985,
+          "within_subject_var_msw": 0.0008348970245720392,
+          "variance_ratio_between_within": 4.554311472987181,
+          "icc1": 0.5422860185445649
+        }
+      },
+      "picking object": {
+        "belt_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.002613932245026938,
+          "within_subject_var_msw": 1.4848723395199935e-05,
+          "variance_ratio_between_within": 176.03750675778159,
+          "icc1": 0.9831496179954852
+        },
+        "belt_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.001251019986128985,
+          "within_subject_var_msw": 0.00016087298223840688,
+          "variance_ratio_between_within": 7.776445545561074,
+          "icc1": 0.6931400081942737
+        },
+        "ankle_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.0018096477850355337,
+          "within_subject_var_msw": 1.451576926338533e-05,
+          "variance_ratio_between_within": 124.66771496569604,
+          "icc1": 0.9763159854836534
+        },
+        "ankle_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.004310042323753397,
+          "within_subject_var_msw": 0.000633635094173,
+          "variance_ratio_between_within": 6.8020890310356386,
+          "icc1": 0.6591718182556232
+        },
+        "wrist_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.0037230930650905083,
+          "within_subject_var_msw": 0.00013799178402419896,
+          "variance_ratio_between_within": 26.98054156932711,
+          "icc1": 0.8964822657705199
+        },
+        "wrist_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.0036176155840843298,
+          "within_subject_var_msw": 0.0028582522147286055,
+          "variance_ratio_between_within": 1.2656740246513993,
+          "icc1": 0.08135350394617516
+        }
+      },
+      "jumping": {
+        "belt_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.07138046083777029,
+          "within_subject_var_msw": 0.002462268438065956,
+          "variance_ratio_between_within": 28.989715229358858,
+          "icc1": 0.9031936893321989
+        },
+        "belt_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.16687740429604636,
+          "within_subject_var_msw": 0.005090433263290536,
+          "variance_ratio_between_within": 32.782554188358844,
+          "icc1": 0.9137498648387343
+        },
+        "ankle_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.016450152320848278,
+          "within_subject_var_msw": 0.003415570123238244,
+          "variance_ratio_between_within": 4.816224444911167,
+          "icc1": 0.5598736479049293
+        },
+        "ankle_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.041068096221638296,
+          "within_subject_var_msw": 0.002726775709499083,
+          "variance_ratio_between_within": 15.06104667082524,
+          "icc1": 0.8241608467591812
+        },
+        "wrist_mag_mean": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.042434174082014775,
+          "within_subject_var_msw": 0.002018165845628612,
+          "variance_ratio_between_within": 21.026108520232892,
+          "icc1": 0.8697131129489849
+        },
+        "wrist_mag_std": {
+          "n_subjects": 15,
+          "between_subject_var_msb": 0.12161384995751837,
+          "within_subject_var_msw": 0.003108991000471036,
+          "variance_ratio_between_within": 39.116822769539354,
+          "icc1": 0.9270371639167
+        }
+      },
+      "laying": {
+        "belt_mag_mean": {
+          "n_subjects": 14,
+          "between_subject_var_msb": 0.0036228084760061173,
+          "within_subject_var_msw": 1.8828307437531223e-05,
+          "variance_ratio_between_within": 192.41285962776598,
+          "icc1": 0.9845689220057563
+        },
+        "belt_mag_std": {
+          "n_subjects": 14,
+          "between_subject_var_msb": 0.0005857099983606557,
+          "within_subject_var_msw": 6.558941086416452e-05,
+          "variance_ratio_between_within": 8.92994754250285,
+          "icc1": 0.72552475770501
+        },
+        "ankle_mag_mean": {
+          "n_subjects": 14,
+          "between_subject_var_msb": 0.00046375047896845444,
+          "within_subject_var_msw": 3.998683822694746e-06,
+          "variance_ratio_between_within": 115.9757809148134,
+          "icc1": 0.9745710519842525
+        },
+        "ankle_mag_std": {
+          "n_subjects": 14,
+          "between_subject_var_msb": 0.0003780351431119733,
+          "within_subject_var_msw": 0.0002573866699100858,
+          "variance_ratio_between_within": 1.46874406216932,
+          "icc1": 0.13513365465083402
+        },
+        "wrist_mag_mean": {
+          "n_subjects": 14,
+          "between_subject_var_msb": 0.007066585157287254,
+          "within_subject_var_msw": 8.496817220817302e-05,
+          "variance_ratio_between_within": 83.16743756678721,
+          "icc1": 0.9647752699187709
+        },
+        "wrist_mag_std": {
+          "n_subjects": 14,
+          "between_subject_var_msb": 0.0010533843791968452,
+          "within_subject_var_msw": 0.0008219553401623964,
+          "variance_ratio_between_within": 1.281559140413547,
+          "icc1": 0.08580041631614915
+        }
+      }
+    },
+    "mean_icc_across_adl_activities": {
+      "belt_mag_mean": 0.96379093621969,
+      "belt_mag_std": 0.7165246969569213,
+      "ankle_mag_mean": 0.9060626629072405,
+      "ankle_mag_std": 0.6056597421326578,
+      "wrist_mag_mean": 0.8792507990280044,
+      "wrist_mag_std": 0.5140655123374869
+    }
+  },
+  "experiment_2c_reference": {
+    "population_zscore": {
+      "split": "subject-wise (test subjects 15,16,17)",
+      "n_train": 394,
+      "n_test": 99,
+      "accuracy": 0.9494949494949495,
+      "precision_fall": 0.9,
+      "recall_fall": 1.0,
+      "f1_fall": 0.9473684210526315,
+      "roc_auc": 0.9946502057613169,
+      "confusion_matrix": {
+        "tn": 49,
+        "fp": 5,
+        "fn": 0,
+        "tp": 45
+      }
+    },
+    "personal_zscore": {
+      "split": "subject-wise (test subjects 15,16,17)",
+      "n_train": 394,
+      "n_test": 99,
+      "accuracy": 0.9595959595959596,
+      "precision_fall": 0.9555555555555556,
+      "recall_fall": 0.9555555555555556,
+      "f1_fall": 0.9555555555555556,
+      "roc_auc": 0.9967078189300411,
+      "confusion_matrix": {
+        "tn": 52,
+        "fp": 2,
+        "fn": 2,
+        "tp": 43
+      }
+    },
+    "raw_features": {
+      "split": "subject-wise (test subjects 15,16,17; train subjects 1-4,6-8,10-14)",
+      "n_train": 394,
+      "n_test": 99,
+      "n_test_fall": 45,
+      "n_test_adl": 54,
+      "accuracy": 0.9494949494949495,
+      "precision_fall": 0.9,
+      "recall_fall": 1.0,
+      "f1_fall": 0.9473684210526315,
+      "roc_auc": 0.9946502057613169,
+      "confusion_matrix": {
+        "tn": 49,
+        "fp": 5,
+        "fn": 0,
+        "tp": 45
+      },
+      "dummy_accuracy": 0.5454545454545454
+    }
+  },
+  "experiment_2c_univariate_zscore_negative": {
+    "method": "mean |z| over 6 accel-magnitude features (belt/ankle/wrist mean+std), population vs personal reference",
+    "auc_population": 0.063,
+    "auc_personal": 0.071,
+    "note": "diagnostic run; univariate score is anti-predictive, so it is NOT used as the 2c result. The model-based comparison above is the 2c result."
+  }
+}
