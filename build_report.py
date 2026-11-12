@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the CSCE 5280 Project Progress Report (Proposal #3), rebuilt for legitimacy.
+"""Build the CSCE 5280 Project Progress Report (Proposal #3).
 Max 3 content pages + references. fpdf2. All numbers come from results/*.json.
 """
 from fpdf import FPDF
@@ -16,14 +16,14 @@ class Report(FPDF):
             self.set_x(self.l_margin)
             self.set_font("Helvetica", "", 9.5)
             self.cell(0, 5, "Project Progress Report (Proposal #3)  |  CSCE / BMEN 5280, Fall 2026", new_x="LMARGIN", new_y="NEXT")
-            self.cell(0, 5, "Ashish Rathnakar Shetty, sole student investigator  |  November 12, 2026", new_x="LMARGIN", new_y="NEXT")
+            self.cell(0, 5, "Ashish Rathnakar Shetty, sole student investigator  |  November 11, 2026", new_x="LMARGIN", new_y="NEXT")
             self.ln(1)
             self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
             self.ln(2)
     def footer(self):
         self.set_y(-11)
         self.set_font("Helvetica", "", 8)
-        self.cell(0, 5, f"Project Progress Report, Baseline Drift AI, Shetty, Nov 12, 2026  |  Page {self.page_no()}", align="C")
+        self.cell(0, 5, f"Project Progress Report, Baseline Drift AI, Shetty, Nov 11, 2026  |  Page {self.page_no()}", align="C")
 
 pdf = Report("P", "mm", "Letter")
 pdf.set_auto_page_break(auto=True, margin=13)
@@ -122,7 +122,7 @@ pdf.cell(0, 5.5, "Table 2. Updated Path to the Final Demonstration", new_x="LMAR
 table(
     ["Week", "Specific Deliverable / Decision", "Responsible", "Evidence of Completion"],
     [
-        ["11", "Process household video (30 s walks); timed walks; camera MAE", "Shetty", "Video files + MAE number; submitted Nov 12"],
+        ["11", "Process household video (30 s walks); timed walks; camera MAE", "Shetty", "Video files + MAE number; submitted Nov 11"],
         ["12", "Drift rule on camera features; cumulative-sum rule test", "Shetty", "Baseline figures + alert log + lag comparison"],
         ["13", "Older-adult pilot setup (consent + 7 baseline days) or reduced-scope decision", "Shetty + instructor guidance", "Consent records or written scope decision"],
         ["14 Final", "Demonstration + final report and presentation", "Shetty", "Demo + final PDF + slides"],

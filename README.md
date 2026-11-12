@@ -38,6 +38,7 @@ Public datasets, not included in this repository: UP-Fall Detection Dataset (Mar
 - scripts/generate_synthetic.py: generates the labeled synthetic validation set.
 - results/: the JSON result files behind every number above.
 - build_report.py: builds the project progress report PDF.
+- improvement-brief-2026-11-11.md: improvements made after the progress report, the household recording protocol, and the final demo plan.
 
 ## Running
 
